@@ -1,0 +1,19 @@
+css*, *::before, *::after {
+  box-sizing: border-box; /* Bootstrap ya lo hace, puedes quitarlo */
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%; /* Esto sí es útil mantenerlo */
+}
+
+input, button, textarea, select {
+  font: inherit; /* Bootstrap no siempre hereda fuentes en forms */
+}
+
+:root {
+
+}
+
+body {
+}

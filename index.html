@@ -8,22 +8,21 @@
 
 
     <!-- css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/index.css">
-
     <!-- js -->
-    <script src="./assets/js/global.js"></script>
-    <script src="./assets/js/index.js"></script>
+    <script defer src="./assets/js/global.js"></script>
+    <script defer src="./assets/js/index.js"></script>
 </head>
 
-<body>
+<body class="min-vh-100 d-flex justify-content-center align-items-center flex-column">
 
     <main class="container">
 
-        <section class="card">
+        <section class="card flex-grow-1 d-flex flex-column flex-md-row">
 
-            <header class="card-header">
-                <div class="card-logo">
+            <header class="card-header col-md-6 d-flex justify-content-center align-items-center flex-column">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="icon icon-tabler icons-tabler-outline icon-tabler-brush">
@@ -39,23 +38,21 @@
                     </h1>
 
                     <p>Donde el arte cobra vida</p>
-                </div>
-
             </header>
 
-            <div class="content">
-                <div class="card-options">
-                    <div>
-                        <p>Iniciar Sesion</p>
+            <div class="content col-md-6 d-flex flex-column">
+                <div class="card-options d-flex gap-2 justify-content-center bg-primary align-self-center rounded-1">
+                    <div  class="p-2">
+                        <p class="m-0">Iniciar Sesion</p>
                     </div>
-                    <div>
-                        <p>Crear una Cuenta</p>
+                    <div  class="p-2" >
+                        <p class="m-0">Crear una Cuenta</p>
                     </div>
                 </div>
 
-                <form action="explore.html" method="get">
+                <form class="d-flex flex-column gap-2" action="explore.html" method="get">
 
-                    <label for="email"></label>
+                    <label class="" for="email"></label>
                     <input type="email" name="email" id="email" placeholder="tu@email.com" required>
 
                     <label for="password"></label>
@@ -86,7 +83,9 @@
         </section>
 
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
