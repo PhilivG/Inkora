@@ -1,19 +1,86 @@
-css*, *::before, *::after {
-  box-sizing: border-box; /* Bootstrap ya lo hace, puedes quitarlo */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+css*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* Bootstrap ya lo hace, puedes quitarlo */
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
-  max-width: 100%; /* Esto sí es útil mantenerlo */
+  max-width: 100%;
+  /* Esto sí es útil mantenerlo */
 }
 
-input, button, textarea, select {
-  font: inherit; /* Bootstrap no siempre hereda fuentes en forms */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  /* Bootstrap no siempre hereda fuentes en forms */
 }
 
 :root {
+  /* Light Mode */
+  --bg-color: hsl(33, 52%, 96%);
+  --card: hsl(28, 100%, 97%);
+  --terracota: hsl(11, 48%, 52%);
+  --amber: hsl(27, 62%, 56%);
+  --amber-t: hsl(27, 62%, 56%, 30%);
+  --dusty-rose: hsl(7, 39%, 62%);
+  --dusty-rose-t: hsl(7, 39%, 62%, 40%);
+  --warm-sand: hsl(31, 45%, 89%);
+  --foreground: hsl(17, 47%, 12%);
+  --muted-text: hsl(17, 24%, 44%);
 
+  /* Dark mode */
+  --bg-color-d: hsl(20, 27%, 9%);
+  --card-d: hsl(22, 29%, 11%);
+  --popover-d: hsl(22, 31%, 14%);
+  --terracota-d: hsl(11, 58%, 60%);
+  --amber-d: hsl(27, 62%, 56%);
+  --foreground-d: hsl(32, 46%, 93%);
+  --muted-text-d: hsl(20, 20%, 53%);
+
+  --fm-hd: "Playfair Display", serif;
+  --fm: "Inter", sans-serif;
+  --fs: 16px;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 3rem;
 }
 
 body {
+  background-color: var(--bg-color);
+  font-family: var(--fm);
+  min-height: 100dvh;
+  font-size: var(--fs);
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fm-hd);
+}
+
+p {
+  color: var(--muted-text);
+  font-family: var(--fm);
+}
+
+body.dark {
+  background-color: var(--bg-color-d);
+  color: var(--muted-text-d);
 }
