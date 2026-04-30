@@ -4,7 +4,7 @@ Proyecto de programacion red social interactiva
 
 ## Vista previa
 
-
+https://philivg.github.io/Inkora/
 
 ## Construido con
 
