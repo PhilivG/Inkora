@@ -14,13 +14,13 @@ content.addEventListener("click", e => {
         const passO = password.value.trim();
 
         const encontrado = usuarios.find(u => {
-            return u.usuario.toLowerCase().trim() === userO &&
+            return u.nick.toLowerCase().trim() === userO &&
                 u.password === Number(passO);
         });
 
         if (encontrado) {
-            console.log(encontrado.usuario, encontrado.password);
-            window.location.href = "explore.html?usuario=" + encontrado.usuario;
+            console.log(encontrado.nick, encontrado.password);
+            window.location.href = "explore.html?usuario=" + encontrado.nick;
         } else {
             errorCon.classList.add("error");
         }

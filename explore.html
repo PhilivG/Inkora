@@ -20,21 +20,21 @@
     <header class="navbar">
 
         <div class="logo-container d-flex align-items-center">
-            <a class="logo d-inline-flex" href="explore.html">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-brush">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M3 21v-4a4 4 0 1 1 4 4h-4" />
-                    <path d="M21 3a16 16 0 0 0 -12.8 10.2" />
-                    <path d="M21 3a16 16 0 0 1 -10.2 12.8" />
-                    <path d="M10.6 9a9 9 0 0 1 4.4 4.4" />
-                </svg>
-                <span>
-                    <a>
-                        Inkora
-                    </a>
-                </span>
+            <a class="d-inline-flex" href="explore.html">
+                <div class="logo-navbar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-brush">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 21v-4a4 4 0 1 1 4 4h-4" />
+                        <path d="M21 3a16 16 0 0 0 -12.8 10.2" />
+                        <path d="M21 3a16 16 0 0 1 -10.2 12.8" />
+                        <path d="M10.6 9a9 9 0 0 1 4.4 4.4" />
+                    </svg>
+                </div>
+                <a class="inkora">
+                    Inkora
+                </a>
             </a>
         </div>
 
@@ -200,7 +200,7 @@
         <section class="artwork col-md-10 mx-auto d-flex flex-column gap-2" id="artworklisten">
             <div class="artwork-filter d-flex justify-content-between align-items-center ">
                 <p>
-                    <span></span> ilustraciones encontradas
+                    <span id="results-count"></span> ilustraciones encontradas
                 </p>
 
                 <div>
@@ -211,111 +211,111 @@
             </div>
 
             <div class="artwork-image">
-                <div class="art-container" data-author="kuvshinov" data-category="illustration,digital">
+                <div class="art-container visible" data-author="kuvshinov" data-category="illustration,digital">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/kuvshinov_001.jpg" alt="kuvshinov image">
                 </div>
-                <div class="art-container" data-author="" data-category="illustration,digital,pixelart">
+                <div class="art-container visible" data-author="" data-category="illustration,digital,pixelart">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/pixel-art_004.jpg" alt="pixel image">
                 </div>
-                <div class="art-container" data-author="" data-category="render,llustration,digital">
+                <div class="art-container visible" data-author="" data-category="render,llustration,digital">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/render_001.jpg" alt="render image">
                 </div>
-                <div class="art-container" data-author="sandoesarts" data-category="illustration,digital,render">
+                <div class="art-container visible" data-author="sandoesarts" data-category="illustration,digital,render">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/samdoesart_001.jpg" alt="samdoesart image">
                 </div>
-                <div class="art-container" data-author="kuvshinov" data-category="illustration,digital">
+                <div class="art-container visible" data-author="kuvshinov" data-category="illustration,digital">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/kuvshinov_002.jpg" alt="kuvshinov image">
                 </div>
-                <div class="art-container" data-author="" data-category="render,llustration,digital">
+                <div class="art-container visible" data-author="" data-category="render,llustration,digital">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/render_002.jpg" alt="render image">
                 </div>
-                <div class="art-container" data-author="sandoesarts" data-category="illustration,digital,render">
+                <div class="art-container visible" data-author="sandoesarts" data-category="illustration,digital,render">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/samdoesart_002.jpg" alt="samdoesart image">
                 </div>
-                <div class="art-container" data-author="kuvshinov" data-category="illustration,digital">
+                <div class="art-container visible" data-author="kuvshinov" data-category="illustration,digital">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/kuvshinov_003.jpg" alt="kuvshinov image">
                 </div>
-                <div class="art-container" data-author="" data-category="render,llustration,digital">
+                <div class="art-container visible" data-author="" data-category="render,llustration,digital">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/render_003.jpg" alt="render image">
                 </div>
-                <div class="art-container" data-author="sandoesarts" data-category="illustration,digital,render">
+                <div class="art-container visible" data-author="sandoesarts" data-category="illustration,digital,render">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/samdoesart_003.jpg" alt="samdoesart image">
                 </div>
-                <div class="art-container" data-author="" data-category="illustration,digital,pixelart">
+                <div class="art-container visible" data-author="" data-category="illustration,digital,pixelart">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/pixel-art_001.jpg" alt="pixel image">
                 </div>
-                <div class="art-container" data-author="kuvshinov" data-category="illustration,digital">
+                <div class="art-container visible" data-author="kuvshinov" data-category="illustration,digital">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/kuvshinov_004.jpg" alt="kuvshinov image">
                 </div>
-                <div class="art-container" data-author="" data-category="render,llustration,digital">
+                <div class="art-container visible" data-author="" data-category="render,llustration,digital">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/render_004.jpg" alt="render image">
                 </div>
-                <div class="art-container" data-author="sandoesarts" data-category="illustration,digital,render">
+                <div class="art-container visible" data-author="sandoesarts" data-category="illustration,digital,render">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/samdoesart_004.jpg" alt="samdoesart image">
                 </div>
-                <div class="art-container" data-author="" data-category="illustration,digital,pixelart">
+                <div class="art-container visible" data-author="" data-category="illustration,digital,pixelart">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/pixel-art_002.jpg" alt="pixel image">
                 </div>
-                <div class="art-container" data-author="kuvshinov" data-category="illustration,digital">
+                <div class="art-container visible" data-author="kuvshinov" data-category="illustration,digital">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/kuvshinov_005.jpg" alt="kuvshinov image">
                 </div>
-                <div class="art-container" data-author="" data-category="render,llustration,digital">
+                <div class="art-container visible" data-author="" data-category="render,llustration,digital">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/render_005.jpg" alt="render image">
                 </div>
-                <div class="art-container" data-author="sandoesarts" data-category="illustration,digital,render">
+                <div class="art-container visible" data-author="sandoesarts" data-category="illustration,digital,render">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/samdoesart_005.jpg" alt="samdoesart image">
                 </div>
-                <div class="art-container" data-author="" data-category="illustration,digital,pixelart">
+                <div class="art-container visible" data-author="" data-category="illustration,digital,pixelart">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/pixel-art_005.jpg" alt="pixel image">
                 </div>
-                <div class="art-container" data-author="" data-category="illustration,digital,pixelart">
+                <div class="art-container visible" data-author="" data-category="illustration,digital,pixelart">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/pixel-art_003.jpg" alt="pixel image">
                 </div>
-                <div class="art-container" data-author="kuvshinov" data-category="illustration,digital">
+                <div class="art-container visible" data-author="kuvshinov" data-category="illustration,digital">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/kuvshinov_006.jpg" alt="kuvshinov image">
                 </div>
-                <div class="art-container" data-author="" data-category="illustration,digital,pixelart">
+                <div class="art-container visible" data-author="" data-category="illustration,digital,pixelart">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/pixel-art_001.jpg" alt="pixel image">
                 </div>
-                <div class="art-container" data-author="" data-category="render,llustration,digital">
+                <div class="art-container visible" data-author="" data-category="render,llustration,digital">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/render_006.jpg" alt="render image">
                 </div>
-                <div class="art-container" data-author="sandoesarts" data-category="illustration,digital,render">
+                <div class="art-container visible" data-author="sandoesarts" data-category="illustration,digital,render">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/samdoesart_006.jpg" alt="samdoesart image">
                 </div>
-                <div class="art-container" data-author="" data-category="render,llustration,digital">
+                <div class="art-container visible" data-author="" data-category="render,llustration,digital">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/render_007.jpg" alt="render image">
                 </div>
-                <div class="art-container" data-author="sandoesarts" data-category="illustration,digital,render">
+                <div class="art-container visible" data-author="sandoesarts" data-category="illustration,digital,render">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/samdoesart_007.jpg" alt="samdoesart image">
                 </div>
-                <div class="art-container" data-author="sandoesarts" data-category="illustration,digital,render">
+                <div class="art-container visible" data-author="sandoesarts" data-category="illustration,digital,render">
                     <img class="img-column" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         src="./assets/image/samdoesart_008.jpg" alt="samdoesart image">
                 </div>
@@ -449,6 +449,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="m-footer">
                             <div class="m-footer-container">
                                 <div>
@@ -492,7 +493,7 @@
                                 </div>
                                 <input id="inputComment" type="text" placeholder="Añade un comentario...">
                             </div>
-                            <button class="send" type="button" class="btn">
+                            <button class="send-comment" type="button" class="btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round"

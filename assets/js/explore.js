@@ -1,16 +1,29 @@
 const searchListen = document.getElementById("searchListen");
+const inputSearch = document.getElementById("inputSearch");
+const inputComment = document.getElementById("inputComment");
 
 const artworkListen = document.getElementById("artworklisten");
 const artworkSortBtns = document.querySelectorAll(".sort-button");
 const artContainer = document.querySelectorAll(".art-container");
+const resultsCount = document.getElementById("results-count");
+
 const modalImg = document.getElementById("modalImg");
-
-const inputSearch = document.getElementById("inputSearch");
-const inputComment = document.getElementById("inputComment");
+const exampleModal = document.getElementById("exampleModal");
 const commentSectionImg = document.getElementById("commentSectionImg");
+const sendComment = document.querySelector(".send-comment");
 
-const params = new URLSearchParams(window.location.search);
-const usuario = params.get("usuario");
+resultsCount.textContent = document.querySelectorAll(".art-container.visible").length;
+
+const usuario = infoUsuario();
+
+
+function infoUsuario() {
+    const params = new URLSearchParams(window.location.search);
+    const nombreUsuario = params.get("usuario")
+
+    const arrayUsuarios = usuarios.find(u => u.nick === nombreUsuario);
+    return arrayUsuarios;
+}
 
 /* Search */
 inputSearch.addEventListener("keypress", e => {
@@ -18,18 +31,19 @@ inputSearch.addEventListener("keypress", e => {
     if (e.key === "Enter") {
         console.log("hola");
         artContainer.forEach(artcontain => {
-            artcontain.classList.add("hidden");
+            artcontain.classList.remove("visible");
             const search = inputSearch.value.toLowerCase().replace(/\s+/g, "");
             const result = artcontain.dataset.author.split(",");
             console.log("search: " + search);
             console.log("result: " + result);
 
             if (result.includes(search)) {
-                artcontain.classList.remove("hidden");
+                artcontain.classList.add("visible");
             }
         })
     }
 
+    resultsCount.textContent = document.querySelectorAll(".art-container.visible").length;
 })
 
 searchListen.addEventListener("click", e => {
@@ -47,22 +61,23 @@ searchListen.addEventListener("click", e => {
 
         if (filter === "all") {
             artContainer.forEach(artcontain => {
-                artcontain.classList.remove("hidden");
+                artcontain.classList.add("visible");
             })
 
         } else {
             artContainer.forEach(artcontain => {
-                artcontain.classList.add("hidden");
+                artcontain.classList.remove("visible");
                 const findFilter = artcontain.dataset.category.split(",");
 
                 if (findFilter.includes(filter)) {
-                    artcontain.classList.remove("hidden");
+                    artcontain.classList.add("visible");
                 }
             })
         }
 
     }
 
+    resultsCount.textContent = document.querySelectorAll(".art-container.visible").length;
 })
 
 /* Artwork */
@@ -84,27 +99,24 @@ artworkListen.addEventListener('click', e => {
 
 })
 
-inputComment.addEventListener("keydown", e => {
-
-    if (e.key === "Enter") {
-        const comentario = inputComment.value;
-
-
-
-        let srcImg = null
-
-        if (usuario === "samdoesarts") {
-            srcImg = "assets/image/samdoesarts-profile.jpg";
-        } else {
-            srcImg = "assets/image/kuvshinov-profile.jpg"
-        }
-
-        const comentarioHtml = createComment(srcImg, usuario, comentario);
-        commentSectionImg.insertAdjacentHTML("beforeend", comentarioHtml);
-    }
-
-
+sendComment.addEventListener("click", e => {
+    enviarComentario();
 })
+
+inputComment.addEventListener("keydown", e => {
+    if (e.key === "Enter") {
+        enviarComentario()
+    }
+})
+
+function enviarComentario() {
+
+    if (inputComment.value.trim() !== "") {
+        const comentarioHtml = createComment(usuario.img, usuario.nick, inputComment.value);
+        commentSectionImg.insertAdjacentHTML("beforeend", comentarioHtml);
+        inputComment.value = "";
+    }
+}
 
 function createComment(img, usuario, text) {
     return ` <div class="comment-featured d-flex align-items-center gap-2">
