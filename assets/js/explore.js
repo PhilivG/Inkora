@@ -1,6 +1,24 @@
 const resultsCount = document.getElementById("results-count");
 resultsCount.textContent = document.querySelectorAll(".art-container.visible").length;
 
+/* Usuario */
+const usuario = infoUsuario();
+const navbarprofileimg = document.getElementById("navbarprofileimg");
+navbarprofileimg.src = usuario.img;
+
+
+function infoUsuario() {
+    const nombreUsuario = localStorage.getItem("usuario")
+
+    const arrayUsuarios = usuarios.find(u => u.nick === nombreUsuario);
+    return arrayUsuarios;
+}
+
+/* Modal */
+const artworkListen = document.getElementById("artworklisten");
+const artContainer = document.querySelectorAll(".art-container");
+
+
 /* Search */
 const searchListen = document.getElementById("searchListen");
 const inputSearch = document.getElementById("inputSearch");
