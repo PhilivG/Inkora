@@ -1,21 +1,7 @@
-const searchListen = document.getElementById("searchListen");
-const inputSearch = document.getElementById("inputSearch");
-const inputComment = document.getElementById("inputComment");
-
-const artworkListen = document.getElementById("artworklisten");
-const artworkSortBtns = document.querySelectorAll(".sort-button");
-const artContainer = document.querySelectorAll(".art-container");
 const resultsCount = document.getElementById("results-count");
 
-const modalImg = document.getElementById("modalImg");
-const exampleModal = document.getElementById("exampleModal");
-const commentSectionImg = document.getElementById("commentSectionImg");
-const sendComment = document.querySelector(".send-comment");
-
 resultsCount.textContent = document.querySelectorAll(".art-container.visible").length;
-
 const usuario = infoUsuario();
-
 
 function infoUsuario() {
     const params = new URLSearchParams(window.location.search);
@@ -26,6 +12,11 @@ function infoUsuario() {
 }
 
 /* Search */
+const searchListen = document.getElementById("searchListen");
+const inputSearch = document.getElementById("inputSearch");
+const inputComment = document.getElementById("inputComment");
+const artContainer = document.querySelectorAll(".art-container");
+
 inputSearch.addEventListener("keypress", e => {
 
     if (e.key === "Enter") {
@@ -34,8 +25,6 @@ inputSearch.addEventListener("keypress", e => {
             artcontain.classList.remove("visible");
             const search = inputSearch.value.toLowerCase().replace(/\s+/g, "");
             const result = artcontain.dataset.author.split(",");
-            console.log("search: " + search);
-            console.log("result: " + result);
 
             if (result.includes(search)) {
                 artcontain.classList.add("visible");
@@ -81,7 +70,11 @@ searchListen.addEventListener("click", e => {
 })
 
 /* Artwork */
+const artworkListen = document.getElementById("artworklisten");
+const artworkSortBtns = document.querySelectorAll(".sort-button");
+const modalImg = document.getElementById("modalImg");
 artworkSortBtns[0].classList.add("active")
+
 artworkListen.addEventListener('click', e => {
     const element = e.target;
 
@@ -99,6 +92,11 @@ artworkListen.addEventListener('click', e => {
 
 })
 
+/* Modal */
+const exampleModal = document.getElementById("exampleModal");
+const commentSection = document.getElementById("commentSection");
+const sendComment = document.querySelector(".send-comment");
+
 sendComment.addEventListener("click", e => {
     enviarComentario();
 })
@@ -113,7 +111,7 @@ function enviarComentario() {
 
     if (inputComment.value.trim() !== "") {
         const comentarioHtml = createComment(usuario.img, usuario.nick, inputComment.value);
-        commentSectionImg.insertAdjacentHTML("beforeend", comentarioHtml);
+        commentSection.insertAdjacentHTML("beforeend", comentarioHtml);
         inputComment.value = "";
     }
 }
