@@ -185,3 +185,172 @@ footer {
   margin-bottom: -1rem;
   color: var(--muted-text-t);
 }
+
+/* artworks */
+
+.artwork-image .art-container {
+    display: none;
+}
+
+.artwork-image .art-container.visible {
+    display: block;
+}
+
+/* Modal */
+
+.modal-content {
+  background-color: whitesmoke;
+  max-height: 80vh;
+
+}
+
+.modal-img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.modal-container img {
+  aspect-ratio: 1/1;
+  border: 2px solid var(--dusty-rose);
+  border-radius: 100%;
+}
+
+.modal-container .modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  border-bottom: 0.1px solid var(--dusty-rose-t);
+
+  img {
+    height: 38px;
+  }
+
+  h3 {
+    font-family: var(--fm);
+    gap: 1rem;
+    font-size: var(--fs-md);
+    margin-bottom: 0;
+  }
+}
+
+
+.modal-container .modal-body {
+  height: 80vh;
+  overflow-y: scroll;
+  padding: 1.5rem 1rem;
+  border-bottom: 0.1px solid var(--dusty-rose-t);
+
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--warm-sand);
+    border-radius: 1rem;
+  }
+}
+
+.comment-featured img {
+  height: 38px;
+  align-self: flex-start;
+}
+
+
+.comment-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  p {
+    color: var(--foreground);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    padding-right: 3rem;
+  }
+
+  span {
+    color: var(--muted-text);
+  }
+
+  h4,
+  p,
+  span {
+    font-family: var(--fm);
+    font-size: var(--fs-md);
+    margin-bottom: 0;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer {
+    display: flex;
+    gap: 0.1rem;
+
+    button {
+      border: none;
+      margin-left: -0.5rem;
+      color: var(--terracota-t);
+      background-color: transparent;
+
+    }
+
+    svg {
+      height: 24px;
+    }
+  }
+}
+
+.m-footer {
+  padding-inline: 1rem;
+  display: flex;
+  padding-block: 0.5rem 1rem;
+}
+
+.m-footer-container {
+  flex: 1;
+
+  button {
+    border: none;
+    margin-left: -0.5rem;
+    color: var(--foreground);
+    background-color: transparent;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  input {
+    border: none;
+    padding: 1rem;
+    background-color: transparent;
+    width: 100%;
+  }
+
+  input:focus {
+    outline: none;
+  }
+}
+
+.send-comment {
+  display: flex;
+  align-items: end;
+  outline: none;
+  border: none;
+  background: transparent;
+
+  svg {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.7rem;
+  }
+}

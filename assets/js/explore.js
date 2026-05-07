@@ -1,35 +1,25 @@
 const resultsCount = document.getElementById("results-count");
-
 resultsCount.textContent = document.querySelectorAll(".art-container.visible").length;
-const usuario = infoUsuario();
-
-function infoUsuario() {
-    const params = new URLSearchParams(window.location.search);
-    const nombreUsuario = params.get("usuario")
-
-    const arrayUsuarios = usuarios.find(u => u.nick === nombreUsuario);
-    return arrayUsuarios;
-}
 
 /* Search */
 const searchListen = document.getElementById("searchListen");
 const inputSearch = document.getElementById("inputSearch");
 const inputComment = document.getElementById("inputComment");
-const artContainer = document.querySelectorAll(".art-container");
 
 inputSearch.addEventListener("keypress", e => {
 
     if (e.key === "Enter") {
-        console.log("hola");
         artContainer.forEach(artcontain => {
             artcontain.classList.remove("visible");
             const search = inputSearch.value.toLowerCase().replace(/\s+/g, "");
-            const result = artcontain.dataset.author.split(",");
+            const result = artcontain.dataset.author;
+            console.log(result);
 
             if (result.includes(search)) {
                 artcontain.classList.add("visible");
             }
         })
+        navbarprofileimg.src = arrayUsuarios.img
     }
 
     resultsCount.textContent = document.querySelectorAll(".art-container.visible").length;
@@ -70,7 +60,6 @@ searchListen.addEventListener("click", e => {
 })
 
 /* Artwork */
-const artworkListen = document.getElementById("artworklisten");
 const artworkSortBtns = document.querySelectorAll(".sort-button");
 const modalImg = document.getElementById("modalImg");
 artworkSortBtns[0].classList.add("active")
@@ -85,11 +74,6 @@ artworkListen.addEventListener('click', e => {
 
         element.classList.add('active');
     }
-
-    if (element.classList.contains("img-column")) {
-        modalImg.src = element.src;
-    }
-
 })
 
 /* Modal */

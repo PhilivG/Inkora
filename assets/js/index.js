@@ -20,7 +20,8 @@ content.addEventListener("click", e => {
 
         if (encontrado) {
             console.log(encontrado.nick, encontrado.password);
-            window.location.href = "explore.html?usuario=" + encontrado.nick;
+            localStorage.setItem("usuario", encontrado.nick)
+            window.location.href = "explore.html";
         } else {
             errorCon.classList.add("error");
         }
