@@ -21,7 +21,7 @@ content.addEventListener("click", e => {
         if (encontrado) {
             console.log(encontrado.nick, encontrado.password);
             localStorage.setItem("usuario", encontrado.nick)
-            window.location.href = "explore.html";
+            window.location.href = "home.html";
         } else {
             errorCon.classList.add("error");
         }
