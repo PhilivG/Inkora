@@ -19,7 +19,6 @@ inputSearch.addEventListener("keypress", e => {
                 artcontain.classList.add("visible");
             }
         })
-        navbarprofileimg.src = arrayUsuarios.img
     }
 
     resultsCount.textContent = document.querySelectorAll(".art-container.visible").length;
