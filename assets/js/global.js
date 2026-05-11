@@ -6,9 +6,13 @@ const usuarios = [
 
 /* Usuario */
 const usuario = infoUsuario();
-const navbarprofileimg = document.getElementById("navbarprofileimg");
-navbarprofileimg.src = usuario.img;
 
+
+const navbarprofileimg = document.getElementById("navbarprofileimg");
+
+if (navbarprofileimg) {
+    navbarprofileimg.src = usuario.img;
+}
 
 function infoUsuario() {
     const nombreUsuario = localStorage.getItem("usuario")
